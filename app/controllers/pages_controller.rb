@@ -21,8 +21,9 @@ require 'mechanize'
 	end
 
 	def show
-		@user = cookies[:user_name]
-		@login = cookies[:user_login]
+		#@name = cookies[:user_name]
+		#@login = cookies[:user_login]
+		@user = User.find_by_UserName(cookies[:user_login])
 	end
 
 
